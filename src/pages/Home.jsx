@@ -209,13 +209,20 @@ export default function Home() {
 
       {/* Featured Fleet Banner & Comprehensive Services with Fixed Parallax Background */}
       <section
-        className="relative text-center bg-cover bg-center md:bg-fixed py-20 text-white shadow-2xl overflow-hidden border-b border-white/5"
-        style={{
-          backgroundImage: `url(${siteData.images.kiaCar})`
-        }}
+        className="relative text-center py-20 text-white shadow-2xl overflow-hidden border-b border-white/5"
+        style={{ clipPath: 'inset(0)' }}
       >
-        {/* Dynamic De-hazed Contrast Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/60 pointer-events-none z-0 backdrop-contrast-[1.08] backdrop-saturate-[1.05]"></div>
+        {/* Full-Viewport Fixed Parallax Background (Crisp & Properly Scaled on Mobile & Desktop) */}
+        <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
+          <img
+            src={siteData.images.kiaCar}
+            alt="SM Driver Center Premium Fleet"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+          />
+          {/* Dynamic Contrast & Readability Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/75 backdrop-contrast-[1.05]" />
+        </div>
 
         {/* Top Title & Get in Touch */}
         <div className="relative container mx-auto px-4 z-10 pt-8 pb-14">

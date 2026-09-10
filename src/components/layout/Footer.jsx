@@ -29,12 +29,22 @@ export default function Footer() {
           {/* Col 1: About Company */}
           <div className="space-y-5">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center font-heading text-lg font-bold text-slate-950 shadow-md">
-                {siteData.company.shortName}
+              <div className="relative w-12 h-12 rounded-full overflow-hidden shadow-lg shadow-amber-500/25 border-2 border-amber-400/80 shrink-0 bg-slate-950">
+                <img
+                  src={siteData.images.logo}
+                  alt="SM Driver Center Logo"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
-              <span className="font-heading text-xl font-bold text-white tracking-wide">
-                {siteData.company.name}
-              </span>
+              <div className="flex flex-col">
+                <span className="font-heading text-xl font-bold text-white tracking-wide">
+                  {siteData.company.name}
+                </span>
+                <span className="text-[11px] text-amber-400/90 font-medium tracking-wider uppercase -mt-0.5">
+                  Since {siteData.company.established}
+                </span>
+              </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed">
               Established in March 2017, SM Driver Center is your trusted partner for skilled driver services, car rentals, AYA support, and outstation trips across Kolkata and South 24 Parganas.

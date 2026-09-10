@@ -34,10 +34,13 @@ export default function Navbar() {
             onClick={closeMenu}
             className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-lg"
           >
-            <div className="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-full flex items-center justify-center shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform duration-200">
-              <span className="font-heading text-lg sm:text-xl font-bold text-slate-950 tracking-wider">
-                {siteData.company.shortName}
-              </span>
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shadow-lg shadow-amber-500/25 border-2 border-amber-400/80 group-hover:scale-105 transition-transform duration-200 shrink-0 bg-slate-950">
+              <img
+                src={siteData.images.logo}
+                alt="SM Driver Center Logo"
+                className="w-full h-full object-cover"
+                loading="eager"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-heading text-lg sm:text-xl font-bold text-white tracking-wide group-hover:text-amber-400 transition-colors">

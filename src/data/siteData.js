@@ -69,6 +69,7 @@ export const siteData = {
   ],
 
   images: {
+    logo: "/logo.png",
     heroDesk: pic3,
     kiaCar: pic10,
     aboutTeam: pic12,
