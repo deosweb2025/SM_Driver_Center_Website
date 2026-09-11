@@ -246,8 +246,16 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p className="text-center md:text-left">
             © {new Date().getFullYear()} {siteData.company.name}. 
-            <span className="block sm:inline sm:ml-2 text-slate-500">
-              Website Developed &amp; Maintained by Digital Exposure Online Services
+            <span className="block sm:inline sm:ml-2 text-slate-400">
+              Website Developed &amp; Maintained by 
+              <a
+                href="https://www.teamdeoskolkata.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold hover:text-red-700 transition-colors duration-300 ml-1 text-slate-300"
+              >
+                Digital Exposure Online Service
+              </a>
             </span>
           </p>
 

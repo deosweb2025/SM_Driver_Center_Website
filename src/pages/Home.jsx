@@ -58,16 +58,16 @@ export default function Home() {
       />
 
       {/* Hero Section - Shifted upward to fit viewport on initial landing */}
-      <section className="relative min-h-[92vh] lg:min-h-screen flex items-center bg-gradient-to-br from-[#0e1b38] via-[#122248] to-[#0a142c] text-white pt-20 sm:pt-24 lg:pt-20 pb-8 sm:pb-12 lg:pb-12 border-b border-white/5">
+      <section className="relative min-h-[92vh] lg:min-h-screen flex items-center bg-gradient-to-br from-[#0e1b38] via-[#122248] to-[#0a142c] text-white pt-24 sm:pt-28 lg:pt-20 pb-8 sm:pb-12 lg:pb-12 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-14">
             
-            {/* Left Content Column */}
+            {/* Left Content Column (order-2 on mobile so image is on top, order-1 on desktop) */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="lg:w-1/2 text-left"
+              className="lg:w-1/2 text-left order-2 lg:order-1"
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-white leading-tight mb-4 sm:mb-6">
                 <span className="text-yellow-400">Professional</span> Drivers <br />
@@ -119,7 +119,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-              className="lg:w-1/2 relative w-full mt-4 lg:mt-0"
+              className="lg:w-1/2 relative w-full mt-2 lg:mt-0 order-1 lg:order-2"
             >
               <div className="relative mx-auto max-w-lg lg:max-w-none">
                 {/* Animated circular shape behind image top-left matching previous website */}
